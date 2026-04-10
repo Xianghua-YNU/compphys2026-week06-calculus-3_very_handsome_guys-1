@@ -7,10 +7,10 @@
 
 | 任务 | 负责同学 | Commit Hash | 贡献说明 |
 |---|---|---|---|
-| Task A |  |  |  |
-| Task B |  |  |  |
-| Task C |  |  |  |
-| Bonus |  |  |  |
+| Task A | 李子源20241050146 |  | task a |
+| Task B | 耿嘉乐20241050044 |  | task b |
+| Task C | 朱倬涵20241170067 |  | task c |
+| Bonus | 李子源20241050146 |  | bouns |
 
 ---
 
@@ -43,11 +43,13 @@
 
 | 方法 | n | 积分值 | 误差估计 | 结论 |
 |---|---:|---:|---:|---|
-| 梯形法 |  |  |  |  |
-| Simpson 法 |  |  |  |  |
+| 梯形法 | 100 | 0.2000333333 | 3.33 × 1 0 − 5 | 具有 [ o bj ec tO bj ec t ] O ( h 2 ) 精度，收敛较慢 |
+| Simpson 法 | 100 | 0.2000000013 | 1.33 × 1 0 − 9 | 具有 [ o bj ec tO bj ec t ] O ( h 4 ) 精度，精度极高 |
 
 - 对 Debye 积分结果的解释：  
-
+- 1. 物理一致性 ：通过对 [ o bj ec tO bj ec t ] T = 80 K （低温）和 [ o bj ec tO bj ec t ] T = 500 K （高温）的积分计算，结果反映了 Debye 模型的物理直觉：在低温下热容遵循 [ o bj ec tO bj ec t ] T 3 规律，在高温下趋于杜隆-珀蒂（Dulong-Petit）定律给出的常数。
+  2. 数值稳定性 ：Debye 积分核 [ o bj ec tO bj ec t ] ( e x − 1 ) 2 x 4 e x ​ 在 [ o bj ec tO bj ec t ] x 较大时衰减极快，Simpson 法能够通过较少的分段点（如 [ o bj ec tO bj ec t ] n = 200 ）捕捉到被积函数的主要贡献区域，从而在高精度要求下比梯形法更具计算效率。
+  3. 方法选择 ：由于物理实验中的 Debye 温度 [ o bj ec tO bj ec t ] θ D ​ 往往是拟合得到的，Simpson 法提供的高精度数值积分能有效减小拟合过程中的数值噪声传播的数值噪声传递。
 ---
 
 ## 4. Task C：带电圆环电势场（23分）
